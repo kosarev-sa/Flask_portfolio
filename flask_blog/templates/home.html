@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block style %}
+{% endblock style %}
+
+{% block content %}
+<section class="registration-section">
+    <h2 class="section-title">Hello{% if current_user.is_authenticated %}, {{
+        current_user.username }}{% endif %}!</h2>
+    <p>I am Sergey Kosarev, python developer.
+        I improve skills in Python, including OOP, Django Framework and DRF, Flask,
+        FastAPI, Scrapy, Scikit-learn; as well as JavaScript, SQL, etc. I have other hard
+        skills. This site was created to showcase my portfolio. If you are ready to offer a
+        Python-developer, data-scientist, analyst or similar job, you can contact me
+        through any of the contacts provided. I will be glad to answer all your
+        questions.</p>
+    <a href="#!" class="btn btn-primary btn-hire-me">HIRE ME</a>
+</section>
+<section class="resume-section">
+    <div class="row">
+        <div class="col-lg-6">
+            <br><h6 class="section-subtitle">RESUME</h6>
+            <h2 class="section-title">EDUCATION</h2>
+            <ul class="time-line">
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2021 — 2022</span>
+                    <h6 class="time-line-item-title">Python developer</h6>
+                    <p class="time-line-item-subtitle">GeekBrains University, gb.ru
+                        (mail.ru company)</p>
+                    <p class="time-line-item-content">Django, REST, WSGI, JS, SQL, HTML</p>
+                </li>
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2006 - 2009</span>
+                    <h6 class="time-line-item-title">Lawyer</h6>
+                    <p class="time-line-item-subtitle">Volga State Academy of Water
+                        Transport, Nizhny Novgorod</p>
+                    <p class="time-line-item-content"> Jurisprudence
+                    </p>
+                </li>
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2003 - 2008</span>
+                    <h6 class="time-line-item-title">Company manager</h6>
+                    <p class="time-line-item-subtitle">Volga State Academy of Water
+                        Transport, Nizhny Novgorod</p>
+                    <p class="time-line-item-content">Economics, management
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-6">
+            <h6 class="section-subtitle">RESUME</h6>
+            <h2 class="section-title">Experience</h2>
+            <ul class="time-line">
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2022</span>
+                    <h6 class="time-line-item-title">Python Developer</h6>
+                    <p class="time-line-item-content">Self-employment / private practice /
+                        freelancing</p>
+                </li>
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2017 - 2022</span>
+                    <h6 class="time-line-item-title">Business development director</h6>
+                    <p class="time-line-item-subtitle">Federal real estate agency</p>
+                    <p class="time-line-item-content">Analytics, sales planning, opening of
+                        new sales offices.
+                    </p>
+                </li>
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2013 - 2017</span>
+                    <h6 class="time-line-item-title">Deputy Director</h6>
+                    <p class="time-line-item-subtitle">House management company of the city
+                        district</p>
+                    <p class="time-line-item-content">Financial analytics, modeling,
+                        control of results. Ensuring financial stability and economic development
+                        of the enterprise.
+                    </p>
+                </li>
+                <li class="time-line-item">
+                    <span class="badge badge-primary">2008 - 2013</span>
+                    <h6 class="time-line-item-title">Various positions in construction
+                        and communal services</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

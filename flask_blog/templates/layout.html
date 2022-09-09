@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Sergey Kosarev | Portfolio</title>
+    {% endif %}
+
+    {% block head %}
+    {% endblock head %}
+
+    {% block style %}
+    {% endblock style %}
+</head>
+
+<body>
+
+<header>
+    <!--    <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img-->
+    <!--            src="assets/images/share.svg"-->
+    <!--            alt="share" class="btn-img">-->
+    <!--        SHARE-->
+    <!--    </button>-->
+
+    <div class="ml-auto mr-3 ml-md-0 mr-md-auto">
+        <span class="badge">S H A R E :</span>
+        <div class="ya-share2" data-curtain data-size="s"
+             data-shape="round"
+             data-color-scheme="blackwhite" data-services="telegram,viber,whatsapp"></div>
+    </div>
+
+    <nav class="collapsible-nav" id="collapsible-nav">
+        {% block navi %}
+        <!--        <a href="index.html" class="nav-link active">HOME</a>-->
+        <!--        <a href="resume.html" class="nav-link">RESUME</a>-->
+        <!--        <a href="portfolio" class="nav-link">PORTFOLIO</a>-->
+        <!--        <a href="blog" class="nav-link">BLOG</a>-->
+        <!--        <a href="contact.html" class="nav-link">CONTACTS</a>-->
+        <a href="/" class="nav-link active">HOME</a>
+        <a href="portfolio" class="nav-link">PORTFOLIO</a>
+        <a href="blog" class="nav-link">BLOG</a> |
+        {% if current_user.is_authenticated %}
+        <a href="account" class="nav-link">ACCOUNT</a>
+        <a href="logout" class="nav-link">LOGOUT</a>
+        {% else %}
+        <a href="login" class="nav-link">LOGIN</a>
+        <a href="register" class="nav-link">REGISTER</a>
+        {% endif %}
+        {% endblock %}
+    </nav>
+    <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger">
+    </button>
+
+    {% block header %}
+    {% endblock header %}
+</header>
+
+<div class="content-wrapper">
+    <aside>
+        <div class="profile-img-wrapper">
+            <img src="assets/images/Profile.png" alt="profile">
+        </div>
+        <h1 class="profile-name">Sergey Kosarev</h1>
+        <div class="text-center">
+            <span class="badge badge-white badge-pill profile-designation">Python Developer</span>
+        </div>
+        <nav class="social-links">
+            {# <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>#}
+            {# <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a>#}
+            {# <a href="#!" class="social-link"><i class="fab fa-behance"></i></a>#}
+            {# <a href="#!" class="social-link"><i class="fab fa-dribbble"></i></a>#}
+            <a href="https://github.com/kosarev-sa?tab=repositories" class="social-link"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sergey-kosarev-312330210/" class="social-link"><i
+                    class="fab fa-linkedin"></i></a>
+        </nav>
+        <div class="widget">
+            <h5 class="widget-title">personal information</h5>
+            <div class="widget-content">
+                <p>BIRTHDAY : 12 Dec 1986</p>
+                <p>EDUCATION : economic, legal, py development</p>
+                <p>PHONE : +7 905 195 7678</p>
+                <p>MAIL : kosarev-sa@mail.ru</p>
+                {# <p>WEBSITE : http://z9051909.beget.tech/index.php</p> #}
+                <p>LOCATION : Nizhny Novgorod, Russia</p>
+
+                <form action="https://nn.hh.ru/resume/9aefb0e5ff08cb142c0039ed1f4434486a3934"
+                      target="_blank">
+                    <button class="btn btn-download-cv btn-primary rounded-pill">
+                        <img src="assets/images/download.svg"
+                             alt="download"
+                             class="btn-img">CV from hh.ru
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="widget card">
+            <div class="card-body">
+                <div class="widget-content">
+                    <h5 class="widget-title card-title">LANGUAGES</h5>
+                    <p>Russian : native</p>
+                    <p>English : intermediate</p>
+                </div>
+            </div>
+        </div>
+        <div class="widget card">
+            <div class="card-body">
+                <div class="widget-content">
+                    <h5 class="widget-title card-title">INTERESTS</h5>
+                    <p>IT Science</p>
+                    <p>Traveling</p>
+                    <p>Football</p>
+                    <p>Real estate</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            {% block footer %}
+            {% endblock footer %}
+            Sergey Kosarev | CV 2022 |
+            telegram: @Supersirius<br>
+            Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank"
+                             rel="noopener noreferrer">BootstrapDash</a>.
+            All Rights Reserved 2020
+        </footer>
+    </main>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+<script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+<script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/live-resume.js"></script>
+<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="https://yastatic.net/share2/share.js" async></script>
+
+</body>
+</html>
