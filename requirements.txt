@@ -74,3 +74,5 @@ Werkzeug==1.0.1
 wikipedia==1.4.0
 wsproto==1.1.0
 WTForms==2.3.3
+
+fastapi~=0.85.0

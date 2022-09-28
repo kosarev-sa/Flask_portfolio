@@ -24,11 +24,14 @@ def create_app():
     from flask_blog.main.routes import main
     from flask_blog.users.routes import users
     from flask_blog.blog.routes import blog
+    from flask_blog.portfolio.routes import portfolio
     from flask_blog.errors.handlers import errors
 
     app.register_blueprint(main)
     app.register_blueprint(users)
     app.register_blueprint(blog)
+    app.register_blueprint(portfolio)
     app.register_blueprint(errors)
+
 
     return app

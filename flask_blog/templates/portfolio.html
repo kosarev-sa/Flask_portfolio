@@ -1,0 +1,180 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Alexander Naumov
+{% endblock %}
+
+{% block navi %}
+<a href="/" class="nav-link">HOME</a>
+
+<a href="portfolio" class="nav-link active">PORTFOLIO</a>
+<a href="blog" class="nav-link">BLOG</a> |
+{% if current_user.is_authenticated %}
+<a href="account" class="nav-link">ACCOUNT</a>
+<a href="logout" class="nav-link">LOGOUT</a>
+{% else %}
+<a href="login" class="nav-link">LOGIN</a>
+<a href="register" class="nav-link">REGISTER</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="portfolio-section">
+    <h2 class="section-title">PORTFOLIO</h2>
+
+    <div class="portfolio-wrapper">
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 01</h5>
+                <p class="portfolio-item-description">Business card site | Flask project</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://kosarevsa.herokuapp.com/"
+                   target="_blank">
+                    <img src="assets/images/img1.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    https://kosarevsa.herokuapp.com
+                </a><br>
+                <a href="https://github.com/kosarev-sa/Flask_portfolio" target="_blank">
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 02</h5>
+                <p class="portfolio-item-description">IT-recruting web-portal | Django project</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="http://195.133.23.182/"
+                   target="_blank">
+                    <img src="assets/images/img2.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    http://195.133.23.182
+                </a><br>
+                <a href="https://github.com/kosarev-sa/BestJob_Django" target="_blank">
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 03</h5>
+                <p class="portfolio-item-description">Clothing Store | Django project</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://cloud.mail.ru/public/xqCM/JPwzERtFz/GeekshopSc_New.avi"
+                   target="_blank">
+                    <img src="assets/images/img3.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    Video presentation
+                </a><br>
+                <a href="https://github.com/kosarev-sa/Geekshop" target="_blank">
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 04</h5>
+                <p class="portfolio-item-description">Online planner | Django REST project</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://cloud.mail.ru/public/xqCM/JPwzERtFz/DRF_ToDo_Sc.avi"
+                   target="_blank">
+                    <img src="assets/images/img4.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    Video presentation
+                </a><br>
+                <a href="https://github.com/kosarev-sa/DRF_ToDo" target="_blank">
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 05</h5>
+                <p class="portfolio-item-description">Dynamic counter | FastAPI
+                    WebSockets presentation</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://websocketsjobs.herokuapp.com/"
+                   target="_blank">
+                    <img src="assets/images/img5.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    https://websocketsjobs.herokuapp.com
+                </a><br>
+                <a href="https://github.com/kosarev-sa/FastAPI_WebSockets_presentation/tree/fastapi_app"
+                   target="_blank">
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 06</h5>
+                <p class="portfolio-item-description">Web workflow with dump and messenger:
+                    Telegram_bot <- GoogleAPI <-> PostgreSQL</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://github.com/kosarev-sa/GoogleAPI--psql-docker-and-telegram_bot"
+                   target="_blank">
+                    <img src="assets/images/img6.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    Code, description => github
+                </a><br>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 07</h5>
+                <p class="portfolio-item-description">Data parsers | Scrapy, Selenium ->
+                    MongoDB</p>
+            </figcaption>
+            <div class="section-subtitle">
+                <a href="https://github.com/kosarev-sa/CastoramaParser_Scrapy"
+                   target="_blank">
+                    <img src="assets/images/img77777.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    Scrapy: goods from Castorama<br>
+                    Code, description => github
+                </a><br><br>
+                <a href="https://github.com/kosarev-sa/MvideoParser_Selenium"
+                   target="_blank">
+                    Selenium: news from Mvideo<br>
+                    Code, description => github
+                </a>
+            </div>
+        </figure>
+
+        <figure class="portfolio-item hover-box">
+            <div class="section-subtitle">
+                <a href="https://github.com/kosarev-sa/Real-Estate-Agency-MySQL-project"
+                   target="_blank">
+                    <img src="assets/images/img8.png" alt="project"
+                         class="portfolio-item-img"><br><br>
+                    Code, description => github
+                </a><br><br>
+                <a href="https://github.com/kosarev-sa/PostgreSQL_scripts" target="_blank">
+                    Cool addition with PostgreSQL<br>(recursion & recode UTF8/WIN1251)
+                </a>
+            </div>
+            <figcaption class="portfolio-item-details overlay">
+                <h5 class="portfolio-item-title">PROJECT 08</h5>
+                <p class="portfolio-item-description">Federal Real Estate Agency | MySQL
+                    project</p>
+            </figcaption>
+        </figure>
+    </div>
+
+</section>
+{% endblock %}
+{% block script %}
+<script src="assets/vendors/entry/jq.entry.min.js"></script>
+{% endblock %}
